@@ -4,7 +4,6 @@ import { cartManager } from '../cart/cart-manager';
 
 import { NavButton } from '../common/NavButton';
 
-//import { Checkout } from './Checkout';
 
 export function Cart() {
 	const section = document.createElement('section');

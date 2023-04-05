@@ -5,12 +5,16 @@ import { Cart } from '../views/Cart';
 import { Home } from '../views/Home';
 import { RoomList } from '../views/RoomList';
 import { SpaList } from '../views/SpaList';
+import { Login } from '../authorization/Login';
+import { Reservation } from '../views/Reservation';
 
 const navItems = [
   { name: 'Home', component: Home },
   { name: 'Rooms', component: RoomList },
   { name: 'SPA', component: SpaList },
   { name: '🛒', component: Cart },
+  { name: 'Reservation', component: Reservation },
+  { name: 'Login', component: Login },
   
 
 ];

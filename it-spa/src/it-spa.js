@@ -7,6 +7,10 @@ import { Home } from './views/Home';
 import { RoomList } from './views/RoomList';
 import { SpaList } from './views/SpaList';
 import { Nav } from './navigation/Nav';
+import { Login } from './authorization/Login';
+import { Reservation } from './views/Reservation';
+import { Register } from './views/Register';
+
 
 
 const main = document.querySelector('main');
@@ -29,4 +33,4 @@ document.body.addEventListener('navigate', event => {
 
 // uzytkownik wystartuje na Home
 //main.append(Home());
-main.append(SpaList());
+main.append(Home());
