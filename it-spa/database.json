@@ -1,5 +1,12 @@
 {
-  "users": [],
+  "users": [
+    {
+      "name": ,
+      "lastname": ,
+      "username": ,
+      ""
+    }
+  ],
   "rooms": [
     {
       "id": 1,

@@ -18,7 +18,7 @@ export function Login() {
     <div class="mb-3 row">
     <label for="inputEmail" class="col-sm-2 col-form-label">Email@example</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail">
+      <input type="date" class="form-control" id="inputEmail">
     </div>
     </div>
     <div class="mb-3 row">
@@ -30,12 +30,38 @@ export function Login() {
     <footer></footer>
     </div>
     </section>
-    <section1>
-    <h1>Załóż konto</h1>
-    <div>
-    </div>
-    </section1>
+    <h1>Zarejstruj się</h1>
+    <section class='Register'>
+    </section>
+    <section class='test'>
+    </section>
     `;
+
+    const button=document.createElement('button');
+    button.classList.add('btn', 'btn-success');
+    button.innerText= 'button';
+    button.addEventListener('click', function(){
+      MyNAvi(Register)
+    })
+    const sectionRegister=div.querySelector('.Register');
+    sectionRegister.append(button);
+
+    const button1=document.createElement('button');
+    button1.classList.add('btn', 'btn-warning', 'btn-lg');
+    button1.innerText='testbutton'
+    button1.addEventListener('click', function(){
+      MyNAvi(Register)
+    })
+
+    const sectionR=div.querySelector('.test')
+    sectionR.append(button1);
+    // <section id=100 class='Register'>
+    // div.querySelector('#100')
+
+    // div1.innerHTML=`
+    // <button type="button" class="btn btn-danger" >Tralaa</button>
+    // `;
+    // div.append(div1);
     
 
     const logInButton = document.createElement('button');
@@ -45,18 +71,15 @@ export function Login() {
      MyNAvi(Home);
      }
     );
-    div.querySelector('footer').append(logInButton);
-    
-    //return div;
 
-    const registerButton = document.createElement('button');
-    registerButton.innerText = 'Zarejestruj';
-    registerButton.classList.add('btn','btn-primary');
-    registerButton.addEventListener('click', () => {
-     MyNAvi(Register);
-     }
-    );
-    div.querySelector('section1').append(registerButton);
+    // const registerButton = document.createElement('button');
+    // registerButton.innerText = 'Zarejestruj';
+    // registerButton.classList.add('btn','btn-success');
+    // registerButton.addEventListener('click', () => {
+    //  MyNAvi(Register);
+    //  }
+    // );
+    div.querySelector('footer').append(logInButton);
     
     return div;
     
