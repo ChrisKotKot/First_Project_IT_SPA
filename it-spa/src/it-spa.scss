@@ -8,17 +8,20 @@ body {
 }
 
 body {
-    background : linear-gradient(45deg, #1CB5E0 0%, #199bbe 100%) no-repeat fixed;
+    background : #F7F6F2;
     font-family: 'Poppins', 'Arial', sans-serif;
     padding    : 2rem;
 }
 
 nav {
-    background: linear-gradient(45deg, #ffc107 0%, #f4b700 100%);
+    // background: linear-gradient(45deg, #ffc107 0%, #f4b700 100%);
+    background: #243d18;
+
 
     button,
     .btn {
         background   : transparent;
+        color: white;
         border       : 0;
         border-radius: 0;
         box-shadow   : none !important;
@@ -32,6 +35,8 @@ nav {
             background: transparent;
         }
     }
+
+
 
     .btn.btn-active {
         background-color: #f4b700;

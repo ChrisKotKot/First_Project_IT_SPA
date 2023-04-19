@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RWD strona teamu1</title>
+	<link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/fixed.css">
+</head>
+
+<body>
+
+	<!--- Start HOME Section -->
+	<div id="home">
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-md navbar-dark nav-bk fixed-top">
+			<a class="navbar-brand" href="#">
+				<img src="img/newLogo.jpg" alt="LOGO" />
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ms-auto">
+					<!-- emmet: li.nav-item*6>a.nav-link -->
+					<li class="nav-item">
+						<a href="#home" class="nav-link">STRONA DOMOWA</a>
+					</li>
+					<li class="nav-item">
+						<a href="#course" class="nav-link">KURS</a>
+					</li>
+					<li class="nav-item">
+						<a href="#features" class="nav-link">MOŻLIWOŚCI</a>
+					</li>
+					<li class="nav-item">
+						<a href="#resources" class="nav-link">ZASOBY</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							POZOSTAŁE
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#clients">KLIENCI</a></li>
+							<li><a class="dropdown-item" href="#contact">KONTAKT</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="landing">
+			<div class="home-wrap">
+				<div class="home-inner"></div>
+			</div>
+		</div>
+	<div></div>
+		<div class="text-center caption">
+			<h1>Witaj na kursie nauki RWD!</h1>
+			<a class="btn btn-outline-secondary btn-lg" href="#course">Przejdź do kursu</a>
+		</div>
+	</div>
+	<!--- End HOME Section -->
+
+	<!-- Start COURSE section -->
+	<div id="course">
+		<div class="text-center col-12">
+			<p>Zobacz więcej o naszym kursie w linku:</p>
+			<a class="btn btn-secondary btn-md" href="https://www.podyplomowe.it" target="_blank">Więcej o studiach</a>
+		</div>
+	</div>
+	<!-- End COURSE section -->
+
+	<!-- start FEATURES -->
+	<div id="features">
+		<div class="jumbotron text-center">
+			<h2>Poznaj zagadnienienia:</h2>
+			<ul class="features-list">
+				<li>Tworzenie layoutów HTML/CSS/RWD</li>
+				<li>Programowanie w JS z ES6+</li>
+				<li> w najnowszej wersji</li>
+				<li>Pracy w zespołach projektowych z GIT-em</li>
+			</ul>
+			<hr class="line" />
+		</div>
+	</div>
+	<!-- end FEATURES -->
+
+	<!-- start RESOURCES -->
+	<div id="resources">
+		<div class="jumbotron">
+			<div class="narrow">
+				<div class="heading col-12">
+					<h3 class="text-center">Zobacz nasze zasoby:</h3>
+				</div>
+
+				<div class="row text-center">
+					<div class="col-lg-3">
+						<div class="resource">
+							<i class="fab fa-js-square fa-3x"></i>
+							<h2>Javascript</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate officiis
+								expedita eaque optio sit odit saepe vel quisquam voluptatum quae consequuntur natus
+								ducimus tenetur officia suscipit dolorem, corrupti ab.</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="resource">
+							<i class="fas fa-terminal fa-3x"></i>
+							<h2>Terminal</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate officiis
+								expedita eaque optio sit odit saepe vel quisquam voluptatum quae consequuntur natus
+								ducimus tenetur officia suscipit dolorem, corrupti ab.</p>
+						</div>	
+					</div>
+					<div class="col-lg-3">
+						<div class="resource">
+							<i class="fab fa-btc fa-3x"></i>
+							<h2>Krypto</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate officiis
+								expedita eaque optio sit odit saepe vel quisquam voluptatum quae consequuntur natus
+								ducimus tenetur officia suscipit dolorem, corrupti ab.</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="resource">
+							<i class="fas fa-seedling fa-3x "></i>
+							<h2>Spring.js</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate officiis
+								expedita eaque optio sit odit saepe vel quisquam voluptatum quae consequuntur natus
+								ducimus tenetur officia suscipit dolorem, corrupti ab.</p>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end RESOURCES -->
+
+	<!-- start CLIENTS -->
+
+	<div id="clients">
+		<div class="jumbotron">
+			<div class="heading col-12">
+				<h3 class="text-center">Opinie naszych klientów:</h3>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-lg-4 col-sm-4">
+							<img class="client" src="img/client2.png" alt="client2">
+						</div>
+						<div class="col-lg-8 col-sm-8">
+							<blockquote class="blockquote text-center">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vitae, corporis a
+									cumque architecto odio tempora exercitationem. Sit voluptates sed illum repellat
+									dignissimos pariatur hic inventore? Mollitia nemo sapiente distinctio!</p>
+							</blockquote>
+							<hr class="jumbo-line">
+							<footer class="blockquote-footer">
+								<cite>Malwina Warszawska</cite>
+							</footer>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-lg-4 col-sm-4">
+							<img class="client" src="img/client1.png" alt="client1">
+						</div>
+						<div class="col-lg-8 col-sm-8">
+							<blockquote class="blockquote text-center">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vitae, corporis a
+									cumque architecto odio tempora exercitationem. Sit voluptates sed illum repellat
+									dignissimos pariatur hic inventore? Mollitia nemo sapiente distinctio!</p>
+							</blockquote>
+							<hr class="jumbo-line">
+							<footer class="blockquote-footer">
+								<cite>Jacek Malinowski</cite>
+							</footer>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- end CLIENTS -->
+
+	<!-- start contact -->
+	<div id="contact">
+		<footer>
+			<div class="col-12 text-center jumbotron">
+				<h3 class="heading">Kontakt do twórców:</h3>
+				<img src="img/newLogo.jpg" alt="LOGO" />
+				<p>Lorem ipsum dolor sit amet.</p>
+				<strong>Informacje pod numerem 444333222</strong>
+				<hr />
+				<a href="https://www.youtube.com" target="_blank">
+					<i class="fab fa-youtube-square fa-2x"></i>
+				</a>
+				<a href="https://www.amazon.com" target="_blank">
+					<i class="fab fa-amazon fa-2x"></i>
+				</a>
+				<p>&copy; Copyright by students </p>
+			</div>
+		</footer>
+	</div>
+	<!-- end contact -->
+
+
+	<!--- Script Source Files -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+	<!--- End of Script Source Files -->
+
+</body>
+
+</html>

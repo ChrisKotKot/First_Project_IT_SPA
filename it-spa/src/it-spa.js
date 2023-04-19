@@ -33,4 +33,4 @@ document.body.addEventListener('navigate', event => {
 
 // uzytkownik wystartuje na Home
 //main.append(Home());
-main.append(Login());
+main.append(Home());

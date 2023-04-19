@@ -18,7 +18,7 @@ export function Login() {
     <div class="mb-3 row">
     <label for="inputEmail" class="col-sm-2 col-form-label">Email@example</label>
     <div class="col-sm-10">
-      <input type="date" class="form-control" id="inputEmail">
+      <input type="email" class="form-control" id="inputEmail">
     </div>
     </div>
     <div class="mb-3 row">

@@ -1,10 +1,21 @@
 {
   "users": [
     {
-      "name": ,
-      "lastname": ,
-      "username": ,
-      ""
+      "id": "1",
+      "login": "Hecarim",
+      "password": "pas",
+      "email": "hecarim@mail.com",
+      "name": "",
+      "age": ""
+    },
+    {},
+    {
+      "id1": 2,
+      "firstName": "Mark",
+      "lastName": "Otto",
+      "password": "dasda",
+      "email": "Otto@example.com",
+      "id": "QdZ9c9s"
     }
   ],
   "rooms": [
@@ -93,4 +104,3 @@
     }
   ]
 }
- 
