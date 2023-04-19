@@ -1,9 +1,9 @@
 // Cart.js
-
+import { MyNAvi } from '../common/MyNAvi';
 import { cartManager } from '../cart/cart-manager';
 
 import { NavButton } from '../common/NavButton';
-
+import { Checkout } from './Checkout';
 
 export function Cart() {
 	const section = document.createElement('section');
@@ -110,7 +110,8 @@ export function Cart() {
 
 	checkoutButton.classList.add('btn', 'btn-primary');
 
-	checkoutButton.addEventListener('click', () => {});
+	checkoutButton.addEventListener('click', function(){
+		MyNAvi(Checkout)});
 
 	section.querySelector('footer').append(checkoutButton); // kompletujemy zawartosc tabeli
 

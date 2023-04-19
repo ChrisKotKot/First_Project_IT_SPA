@@ -202,6 +202,16 @@ export function Home() {
 	</div>
 `;
 
+const mapG = createEl('div', [], { id: 'mapG' });
+mapG.innerHTML = `
+
+<!--Google map-->
+<div id="map-container-google-3" class="z-depth-1-half map-container-3">
+  <iframe src="https://maps.google.com/maps?q=Nowe+Guty&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+    style="border:0" allowfullscreen></iframe>
+</div>
+`;
+
 	const contact = createEl('div', [], { id: 'contact' });
 	contact.innerHTML = `
 
@@ -224,7 +234,7 @@ export function Home() {
   </footer>
 `;
 
-	section.append(course, resour, clients, contact);
+	section.append(course, resour, clients, mapG, contact);
 
 	return section;
 }

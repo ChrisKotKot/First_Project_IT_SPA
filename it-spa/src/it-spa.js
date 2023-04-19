@@ -10,6 +10,7 @@ import { Nav } from './navigation/Nav';
 import { Login } from './authorization/Login';
 import { Reservation } from './views/Reservation';
 import { Register } from './views/Register';
+import { Checkout } from './views/Checkout';
 
 
 
@@ -33,4 +34,4 @@ document.body.addEventListener('navigate', event => {
 
 // uzytkownik wystartuje na Home
 //main.append(Home());
-main.append(Home());
+main.append(Checkout());

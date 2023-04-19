@@ -16,6 +16,14 @@
       "password": "dasda",
       "email": "Otto@example.com",
       "id": "QdZ9c9s"
+    },
+    {
+      "id1": 2,
+      "firstName": "Mark",
+      "lastName": "Otto",
+      "password": "",
+      "email": "Otto@example.com",
+      "id": "1JW1RYR"
     }
   ],
   "rooms": [
