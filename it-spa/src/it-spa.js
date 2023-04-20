@@ -34,4 +34,4 @@ document.body.addEventListener('navigate', event => {
 
 // uzytkownik wystartuje na Home
 //main.append(Home());
-main.append(Checkout());
+main.append(Home());

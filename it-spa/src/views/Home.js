@@ -67,7 +67,7 @@ export function Home() {
           </div>
           <div id="features">
 		<div class="jumbotron text-center">
-			<h2>Poznaj naszą ofertę!:</h2>
+			<h2>Poznaj naszą ofertę!</h2>
 			<ul class="features-list">
 				<li>Hotel</li>
           <p>Hotel ten to prawdziwa perła wśród hoteli. Zbudowany w nowoczesnej i pięknej architekturze, urzeka swoim wyglądem już od pierwszego wejrzenia. Wnętrza są utrzymane w stylu minimalistycznym, co nadaje im elegancji i nowoczesności.
@@ -87,6 +87,29 @@ export function Home() {
 	</div>
   </div>
   `;
+
+	const gallery = document.createElement('gallery');
+
+	gallery.innerHTML = `
+
+
+  `;
+
+	const img7 = document.createElement('img');
+	img7.src = require('../assets/7.png');
+	img7.style.width = '50vw'; // vw = view width
+
+	const img8 = document.createElement('img');
+	img8.src = require('../assets/6.jpg');
+	img8.style.width = '50vw'; // vw = view width
+
+	// const div7 = gallery.querySelector('.xx7');
+	// div7.append(img7);
+
+	// const div8 = gallery.querySelector('.xx8');
+	// div8.append(img8);
+
+	gallery.append(img7, img8);
 
 	const resour = createEl('div', [], { id: 'resour' });
 	resour.innerHTML = `
@@ -202,8 +225,8 @@ export function Home() {
 	</div>
 `;
 
-const mapG = createEl('div', [], { id: 'mapG' });
-mapG.innerHTML = `
+	const mapG = createEl('div', [], { id: 'mapG' });
+	mapG.innerHTML = `
 
 <!--Google map-->
 <div id="map-container-google-3" class="z-depth-1-half map-container-3">
@@ -234,7 +257,7 @@ mapG.innerHTML = `
   </footer>
 `;
 
-	section.append(course, resour, clients, mapG, contact);
+	section.append(course, gallery, resour, clients, mapG, contact);
 
 	return section;
 }
