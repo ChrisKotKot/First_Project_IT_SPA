@@ -1,4 +1,7 @@
-export function Checkout() {
+import { cartManager } from '../cart/cart-manager';
+import { createEl } from '../common/createEl';
+
+export function Checkout(name, quantity, price) {
 	const section = document.createElement('section');
 
 	section.innerHTML = `
@@ -26,32 +29,7 @@ export function Checkout() {
             <span class="text-muted">Twój koszyk</span>
             <span class="badge badge-secondary badge-pill">3</span>
           </h4>
-          <ul class="list-group mb-3">
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 class="my-0">Nazwa Produktu</h6>
-                <small class="text-muted">Brief description</small>
-              </div>
-              <span class="text-muted">12 PLN</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 class="my-0">Nazwa</h6>
-                <small class="text-muted">Brief description</small>
-              </div>
-              <span class="text-muted">8 PLN</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div>
-                <h6 class="my-0">Nazwa</h6>
-                <small class="text-muted">Brief description</small>
-              </div>
-              <span class="text-muted">$5</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total (USD)</span>
-              <strong>$20</strong>
-            </li>
+          <ul class="listCart list-group mb-3">
           </ul>
 
           <form class="card p-2">
@@ -253,6 +231,36 @@ export function Checkout() {
     </script>
     
     `;
+	const ul = section.querySelector('.listCart');
+	const tableRows = cartManager.getAllItems().map((item) => {
+		const li = createEl('li', [
+			'list-group-item',
+			'd-flex',
+			'justify-content-between',
+			'lh-condensed',
+		]);
+		const div = createEl('div');
+		const h6 = createEl('h6', ['my-0']);
+		h6.innerText = item.name;
+		const small = createEl('small', ['text-muted']);
+		small.innerText = item.quantity;
+		const span = createEl('span', ['text-muted']);
+		span.innerText = item.price;
+		li.append(div, span);
+		div.append(h6, small);
+
+		return li;
+	});
+	ul.append(...tableRows);
+
+	// <ul class="listCart list-group mb-3">
+	// <li class="list-group-item d-flex justify-content-between lh-condensed">
+	//   <div>
+	//     <h6 class="my-0">Nazwa Produktu</h6>
+	//     <small class="text-muted">Brief description</small>
+	//   </div>
+	//   <span class="text-muted">12 PLN</span>
+	// </li>
 
 	return section;
 }

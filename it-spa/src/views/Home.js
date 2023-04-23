@@ -238,11 +238,10 @@ export function Home() {
 	const contact = createEl('div', [], { id: 'contact' });
 	contact.innerHTML = `
 
-  <div id="contact">
   <footer>
     <div class="col-12 text-center jumbotron">
       <h3 class="heading">Zadzwoń do nas!</h3>
-      <img src="img/newLogo.jpg" alt="LOGO" />
+      <div class="logoContact"></div>
       <p>Lorem ipsum dolor sit amet.</p>
       <strong>Informacje pod numerem 444333222</strong>
       <hr />
@@ -256,6 +255,12 @@ export function Home() {
     </div>
   </footer>
 `;
+
+	const logo = createEl('img', ['logoImgContact']);
+	//Sprawdz to
+	logo.src = require('../assets/Logo.png');
+	const logoImg = contact.querySelector('.logoContact');
+	logoImg.append(logo);
 
 	section.append(course, gallery, resour, clients, mapG, contact);
 

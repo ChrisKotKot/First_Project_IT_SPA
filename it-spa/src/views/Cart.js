@@ -111,7 +111,7 @@ export function Cart() {
 	checkoutButton.classList.add('btn', 'btn-primary');
 
 	checkoutButton.addEventListener('click', function(){
-		MyNAvi(Checkout)});
+		MyNAvi(Checkout())});
 
 	section.querySelector('footer').append(checkoutButton); // kompletujemy zawartosc tabeli
 
