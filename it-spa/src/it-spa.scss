@@ -16,6 +16,12 @@ body {
 .logoImgContact {
 	width: 20%;
 	height: 50%;
+	color: #243d18;
+}
+
+.client {
+	width: 35vw;
+	height: auto;
 }
 
 .map-container-3 {
@@ -106,6 +112,26 @@ main {
 		li + li {
 			margin-top: 2rem;
 		}
+	}
+	.hotelimg {
+		img {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.caption {
+		width: 100%;
+		color: white;
+		position: absolute;
+		top: 25%;
+		z-index: 1;
+	}
+
+	.rowclient {
+		display: flex;
+		//justify-content: center;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	article {

@@ -1,6 +1,7 @@
 import { createEl } from '../common/createEl';
 import { MyNAvi } from '../common/MyNAvi';
 import { Register } from '../views/Register';
+import { RoomList } from './RoomList';
 
 // Home.js
 export function Home() {
@@ -11,31 +12,26 @@ export function Home() {
 	img.style.width = '50vw'; // vw = view width
 
 	section.innerHTML = `
+	<div>
+		<div class="car car1"></div>
+		<div class="text-center caption">
+	  <h1>Witaj w IT SPA!</h1>
+	 <a class="btn btn-success btn-lg" href="#course">Przejdź do SPA!</a>
+	</div>
+	</div>
  
-  <div id="carouselControls" class="imagesBilboard carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="car car1 carousel-item active data-bs-interval="1000"">
-      <div class="carousel-caption d-none d-md-block">
-      <div class="text-center caption">
-    <h1>Witaj w IT SPA!</h1>
-   <a class="btn btn-outline-secondary btn-lg" href="#course">Przejdź do SPA!</a>
-  </div>
-      </div>
-    </div>
-    <div class="car car2 carousel-item data-bs-interval="2000"">
-      <div class="carousel-caption d-none d-md-block">
-      </div>
-    </div>
-    <div class="car car3 carousel-item data-bs-interval="3000"">
-      <div class="carousel-caption d-none d-md-block">
-      </div>
-    </div>
-  </div>     
-</div>
 
 
   
     `;
+	// const buttonFor = document.createElement('button');
+	// buttonFor.classList.add('btn', 'btn-success');
+	// buttonFor.innerText = 'button';
+	// buttonFor.addEventListener('click', function () {
+	// 	MyNAvi(RoomList);
+	// });
+	// const sectionFor = div.querySelector('.For');
+	// sectionFor.append(buttonFor);
 
 	const img1 = document.createElement('img');
 	img1.classList.add('d-block', 'w-100');
@@ -44,27 +40,9 @@ export function Home() {
 	const div1 = section.querySelector('.car1');
 	div1.append(img1);
 
-	const img2 = document.createElement('img');
-	img2.classList.add('d-block', 'w-100');
-	img2.src = require('../assets/3.jpg');
-
-	const div2 = section.querySelector('.car2');
-	div2.append(img2);
-
-	const img3 = document.createElement('img');
-	img3.classList.add('d-block', 'w-100');
-	img3.src = require('../assets/4.jpg');
-
-	const div3 = section.querySelector('.car3');
-	div3.append(img3);
-
 	const course = createEl('div', [], { id: 'course' });
 	course.innerHTML = `
   <div id="course">
-          <div class="text-center col-12">
-            <p>Test</p>
-            <a class="btn btn-secondary btn-md" href="https://www.google.pl" target="_blank">Więcej</a>
-          </div>
           <div id="features">
 		<div class="jumbotron text-center">
 			<h2>Poznaj naszą ofertę!</h2>
@@ -79,8 +57,10 @@ export function Home() {
           Poza tym hotel oferuje również luksusowe pokoje i apartamenty, które są urządzone w nowoczesnym stylu i wyposażone we wszystkie niezbędne udogodnienia. Zadbano o każdy detal, aby goście czuli się jak w domu.
           
           W sumie, ten hotel z piękną nowoczesną architekturą, wybitnym spa i restauracją, jest idealnym miejscem dla osób, które szukają relaksu, spokoju i luksusu w pięknych wnętrzach.</p>
+		  <section class="hotelimg"></section>
 				<li>Nowoczesne SPA</li>
           <p>To najlepsze spa, prawdziwa oaza relaksu i odprężenia, oferująca szeroki wybór zabiegów, takich jak masaże, zabiegi na twarz i ciało, sauny i wiele innych. Wszystkie zabiegi są wykonywane przez wykwalifikowany personel, który zadba o to, aby każdy gość poczuł się wyjątkowo i zrelaksowany. Wspaniała atmosfera i wysokiej jakości produkty używane podczas zabiegów sprawiają, że to spa jest jednym z najlepszych w kraju.</p>
+		  <section class="hotelimg1"></section>
 			</ul>
 			<hr class="line" />
 		</div>
@@ -88,12 +68,11 @@ export function Home() {
   </div>
   `;
 
-	const gallery = document.createElement('gallery');
+	// 	const gallery = document.createElement('gallery');
 
-	gallery.innerHTML = `
+	// 	gallery.innerHTML = `
 
-
-  `;
+	//   `;
 
 	const img7 = document.createElement('img');
 	img7.src = require('../assets/7.png');
@@ -103,13 +82,21 @@ export function Home() {
 	img8.src = require('../assets/6.jpg');
 	img8.style.width = '50vw'; // vw = view width
 
-	// const div7 = gallery.querySelector('.xx7');
-	// div7.append(img7);
+	const sectionHotelImage = course.querySelector('.hotelimg');
+	sectionHotelImage.append(img7, img8);
 
-	// const div8 = gallery.querySelector('.xx8');
-	// div8.append(img8);
+	const img10 = document.createElement('img');
+	img10.src = require('../assets/3.jpg');
+	img10.style.width = '50vw'; // vw = view width
 
-	gallery.append(img7, img8);
+	const img9 = document.createElement('img');
+	img9.src = require('../assets/4.jpg');
+	img9.style.width = '50vw'; // vw = view width
+
+	const sectionHotelImage1 = course.querySelector('.hotelimg1');
+	sectionHotelImage1.append(img9, img10);
+
+	// gallery.append(img7, img8);
 
 	const resour = createEl('div', [], { id: 'resour' });
 	resour.innerHTML = `
@@ -118,7 +105,11 @@ export function Home() {
   <div class="jumbotron">
     <div class="narrow">
       <div class="heading col-12">
-        <h3 class="text-center">Zalety hotelu:</h3>
+	  <ul>
+	 <li class="text-center">Zalety hotelu:
+	 </li> 
+	  </ul>
+        
       </div>
 
       <div class="row text-center">
@@ -173,9 +164,8 @@ export function Home() {
 			</div>
 			<div class="row text-center">
 				<div class="col-md-4">
-					<div class="row">
-						<div class="col-lg-4 col-sm-4">
-							<img class="client" src="img/client2.png" alt="client2">
+					<div class="row rowclient">
+						<div id=client1 class="col-lg-4 col-sm-4">
 						</div>
 						<div class="col-lg-8 col-sm-8">
 							<blockquote class="blockquote text-center">
@@ -189,9 +179,8 @@ export function Home() {
 					</div>
 				</div>
         <div class="col-md-4">
-					<div class="row">
-						<div class="col-lg-4 col-sm-4">
-							<img class="client" src="img/client2.png" alt="client2">
+					<div class="row rowclient">
+						<div id=client2 class="col-lg-4 col-sm-4">
 						</div>
 						<div class="col-lg-8 col-sm-8">
 							<blockquote class="blockquote text-center">
@@ -205,9 +194,8 @@ export function Home() {
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="row">
-						<div class="col-lg-4 col-sm-4">
-							<img class="client" src="img/client1.png" alt="client1">
+					<div class="row rowclient">
+						<div id=client3 class="col-lg-4 col-sm-4">
 						</div>
 						<div class="col-lg-8 col-sm-8">
 							<blockquote class="blockquote text-center">
@@ -224,6 +212,21 @@ export function Home() {
 		</div>
 	</div>
 `;
+	const imgClient1 = createEl('img', ['client']);
+	const imgClient2 = createEl('img', ['client']);
+	const imgClient3 = createEl('img', ['client']);
+
+	imgClient1.src = require('../assets/client1.jpg');
+	imgClient2.src = require('../assets/client2.jpg');
+	imgClient3.src = require('../assets/client3.jpg');
+
+	const client1Div = clients.querySelector('#client1');
+	const client2Div = clients.querySelector('#client2');
+	const client3Div = clients.querySelector('#client3');
+
+	client1Div.append(imgClient1);
+	client2Div.append(imgClient2);
+	client3Div.append(imgClient3);
 
 	const mapG = createEl('div', [], { id: 'mapG' });
 	mapG.innerHTML = `
@@ -243,7 +246,7 @@ export function Home() {
       <h3 class="heading">Zadzwoń do nas!</h3>
       <div class="logoContact"></div>
       <p>Lorem ipsum dolor sit amet.</p>
-      <strong>Informacje pod numerem 444333222</strong>
+      <strong>Informacje pod numerem 48 700 000 999</strong>
       <hr />
       <a href="https://www.youtube.com" target="_blank">
         <i class="fab fa-youtube-square fa-2x"></i>
@@ -251,18 +254,17 @@ export function Home() {
       <a href="https://www.amazon.com" target="_blank">
         <i class="fab fa-amazon fa-2x"></i>
       </a>
-      <p>&copy; Copyright by student </p>
     </div>
   </footer>
 `;
 
 	const logo = createEl('img', ['logoImgContact']);
 	//Sprawdz to
-	logo.src = require('../assets/Logo.png');
+	logo.src = require('../assets/Logo1.png');
 	const logoImg = contact.querySelector('.logoContact');
 	logoImg.append(logo);
 
-	section.append(course, gallery, resour, clients, mapG, contact);
+	section.append(course, resour, clients, mapG, contact);
 
 	return section;
 }
