@@ -1,7 +1,7 @@
 import { cartManager } from '../cart/cart-manager';
 import { createEl } from '../common/createEl';
 
-export function Checkout(name, quantity, price) {
+export function Checkout() {
 	const section = document.createElement('section');
 
 	section.innerHTML = `
@@ -18,7 +18,6 @@ export function Checkout(name, quantity, price) {
 
     <div class="container">
       <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="assets/Logo.png" alt="" width="72" height="72">
         <h2>Ostatni krok przed zamówieniem!</h2>
         <p class="lead">Wprowadź dane, wybierz rodzaj wysyłki oraz płatności.</p>
       </div>
@@ -185,51 +184,10 @@ export function Checkout(name, quantity, price) {
               </div>
             </div>
             <hr class="mb-4">
-            <button class="btn btn-success btn-lg btn-block" type="submit">Zamawiam
+            <button id="orderButton" class="btn btn-success btn-lg btn-block" type="submit">Zamawiam
         </div>
       </div>
-
-      <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2017-2018 Company Name</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Privacy</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Support</a></li>
-        </ul>
-      </footer>
     </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../../../dist/js/bootstrap.min.js"></script>
-    <script src="../../../../assets/js/vendor/holder.min.js"></script>
-    <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function() {
-        'use strict';
-
-        window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
-    </script>
-    
     `;
 	const ul = section.querySelector('.listCart');
 	const tableRows = cartManager.getAllItems().map((item) => {
@@ -240,12 +198,12 @@ export function Checkout(name, quantity, price) {
 			'lh-condensed',
 		]);
 		const div = createEl('div');
-		const h6 = createEl('h6', ['my-0']);
-		h6.innerText = item.name;
+		const h6 = createEl('h6', ['my-0', 'col-lg-2']);
+		h6.textContent = item.name;
 		const small = createEl('small', ['text-muted']);
-		small.innerText = item.quantity;
-		const span = createEl('span', ['text-muted']);
-		span.innerText = item.price;
+		small.textContent = "Ilość: " + item.quantity;
+		const span = createEl('small', ['text-muted']);
+		span.textContent = item.price + " PLN";
 		li.append(div, span);
 		div.append(h6, small);
 
@@ -261,6 +219,14 @@ export function Checkout(name, quantity, price) {
 	//   </div>
 	//   <span class="text-muted">12 PLN</span>
 	// </li>
+
+section.querySelector("#orderButton").addEventListener('click', () =>{
+
+
+  alert("Właśnie straciłeś pieniądze!");
+})
+
+
 
 	return section;
 }

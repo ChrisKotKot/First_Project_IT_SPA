@@ -19,10 +19,7 @@ export function Home() {
 	 <a class="btn btn-success btn-lg" href="#course">Przejdź do SPA!</a>
 	</div>
 	</div>
- 
 
-
-  
     `;
 	// const buttonFor = document.createElement('button');
 	// buttonFor.classList.add('btn', 'btn-success');
@@ -57,7 +54,7 @@ export function Home() {
           Poza tym hotel oferuje również luksusowe pokoje i apartamenty, które są urządzone w nowoczesnym stylu i wyposażone we wszystkie niezbędne udogodnienia. Zadbano o każdy detal, aby goście czuli się jak w domu.
           
           W sumie, ten hotel z piękną nowoczesną architekturą, wybitnym spa i restauracją, jest idealnym miejscem dla osób, które szukają relaksu, spokoju i luksusu w pięknych wnętrzach.</p>
-		  <section class="hotelimg"></section>
+		  <div class="hotelimg"></div>
 				<li><h4>Nowoczesne SPA</h4></li>
           <p>To najlepsze spa, prawdziwa oaza relaksu i odprężenia, oferująca szeroki wybór zabiegów, takich jak masaże, zabiegi na twarz i ciało, sauny i wiele innych. Wszystkie zabiegi są wykonywane przez wykwalifikowany personel, który zadba o to, aby każdy gość poczuł się wyjątkowo i zrelaksowany. Wspaniała atmosfera i wysokiej jakości produkty używane podczas zabiegów sprawiają, że to spa jest jednym z najlepszych w kraju.</p>
 		  <section class="hotelimg1"></section>
@@ -105,7 +102,7 @@ export function Home() {
     <div class="narrow">
       <div class="heading col-12">
 	  <ul>
-	 <li> <h4 class="text-center">Zalety hotelu
+	 <li> <h4 class="text-center">Zalety hotelu:
 	 </li> 
 	  </ul>
         
@@ -156,6 +153,12 @@ export function Home() {
 	  </ul>
 			
 			</div>
+			
+
+
+
+
+
 			<div class="row text-center">
 				<div class="col-md-4">
 					<div class="row rowclient">
@@ -172,6 +175,7 @@ export function Home() {
 						</div>
 					</div>
 				</div>
+				
         <div class="col-md-4">
 					<div class="row rowclient">
 						<div id=client2 class="col-lg-4 col-sm-4">

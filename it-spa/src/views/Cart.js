@@ -3,6 +3,7 @@ import { MyNAvi } from '../common/MyNAvi';
 import { cartManager } from '../cart/cart-manager';
 
 import { NavButton } from '../common/NavButton';
+
 import { Checkout } from './Checkout';
 
 export function Cart() {
@@ -10,7 +11,7 @@ export function Cart() {
 
 	section.innerHTML = `
 
-        <h2 class = "header">Cart</h2>
+        <h2 class = "header">Koszyk</h2>
 
         <p class = "header">Przeglądaj zawartość koszyka:</p>
 
@@ -26,11 +27,11 @@ export function Cart() {
 
 	tableHead.innerHTML = `
 
-        <th>Name</th>
+        <th>Nazwa</th>
 
-        <th>Quantity</th>
+        <th>Ilość</th>
 
-        <th>Price</th>
+        <th>Cena</th>
 
         <th></th>
 
@@ -96,7 +97,7 @@ export function Cart() {
 
         <td>
 
-        Total = <strong>${cartManager.getTotalPrice()}</strong> PLN
+        Suma = <strong>${cartManager.getTotalPrice()}</strong> PLN
 
         </td>
 
@@ -106,12 +107,14 @@ export function Cart() {
 
 	const checkoutButton = document.createElement('button');
 
-	checkoutButton.innerText = 'Go to Checkout';
+	checkoutButton.innerText = 'Przejdź do zamówienia';
 
 	checkoutButton.classList.add('btn', 'btn-primary');
 
-	checkoutButton.addEventListener('click', function(){
-		MyNAvi(Checkout())});
+	checkoutButton.addEventListener('click', () =>{
+	
+		MyNAvi(Checkout);
+	})
 
 	section.querySelector('footer').append(checkoutButton); // kompletujemy zawartosc tabeli
 

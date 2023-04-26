@@ -29,12 +29,12 @@ export function RoomDetails(roomId) {
           `;
 
 			const addToCartButton1 = document.createElement('button');
-			addToCartButton1.innerText = 'Add to cart';
+			addToCartButton1.innerText = 'Dodaj do koszyka';
 			addToCartButton1.classList.add('btn');
 			addToCartButton1.addEventListener('click', () =>
 				cartManager.addItem(room)
 			);
-			const ReturnButton1 = NavButton('Return...', () => RoomList(room.id), [
+			const ReturnButton1 = NavButton('Wróć...', () => RoomList(room.id), [
 				'btn',
 			]);
 			details.querySelector('footer').append(addToCartButton1, ReturnButton1);

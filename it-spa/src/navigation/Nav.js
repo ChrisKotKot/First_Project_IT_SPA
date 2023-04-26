@@ -12,10 +12,10 @@ import { Reservation } from '../views/Reservation';
 
 const navItems = [
   { name: 'Home', component: Home },
-  { name: 'Rooms', component: RoomList },
+  { name: 'Pokoje', component: RoomList },
   { name: 'SPA', component: SpaList },
   { name: '🛒', component: Cart },
-  { name: 'Reservation', component: Reservation },
+  { name: 'Rezerwacja', component: Reservation },
   { name: 'Login', component: Login },
   
 

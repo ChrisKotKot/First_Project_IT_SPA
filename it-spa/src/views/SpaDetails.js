@@ -29,12 +29,12 @@ export function SpaDetails(treatmentId) {
           `;
 
 			const addToCartButton = document.createElement('button');
-			addToCartButton.innerText = 'Add to cart';
+			addToCartButton.innerText = 'Dodaj do koszyka';
 			addToCartButton.classList.add('btn');
 			addToCartButton.addEventListener('click', () =>
 				cartManager.addItem(treatment)
 			);
-			const ReturnButton = NavButton('Return...', () => SpaList(treatment.id), [
+			const ReturnButton = NavButton('Wróć...', () => SpaList(treatment.id), [
 				'btn',
 			]);
 			details.querySelector('footer').append(addToCartButton, ReturnButton);

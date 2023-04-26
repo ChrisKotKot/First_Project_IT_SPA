@@ -2,9 +2,9 @@
   "users": [
     {
       "id": "1",
-      "login": "Hecarim",
-      "password": "pas",
-      "email": "hecarim@mail.com",
+      "login": "alan",
+      "password": "password",
+      "email": "alan@mail.com",
       "name": "",
       "age": ""
     },

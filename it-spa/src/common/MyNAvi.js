@@ -7,5 +7,5 @@ export function MyNAvi(componentFn) {
 
 	document.body.dispatchEvent(navigationEvent);
 
-	return button;
+	// return button;
 }

@@ -10,7 +10,7 @@ body {
 body {
 	background: #f7f6f2;
 	font-family: 'Poppins', 'Arial', sans-serif;
-	padding: 0rem;
+	padding: 0;
 }
 
 .logoImgContact {
@@ -18,12 +18,34 @@ body {
 	height: 50%;
 	color: #243d18;
 }
-
-.client {
-	width: 35vw;
-	height: auto;
+.car{
+	width: 100%;
 }
+.client {
+	width: 90%;
+	height: auto;
+	min-width: 15vw;
+	border-radius: 20%;
+}
+@media only screen and (max-width:576px){
+	.client {
+	  width: 50%;
+	}
+  }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+	.client {
+	  width: 50%;
+	}
+  }
+  #client1,
+  #client2,
+  #client3{
 
+	display: flex;
+	//flex-wrap: wrap;
+	justify-content: center;
+
+  }
 .map-container-3 {
 	overflow: hidden;
 	padding-bottom: 56.25%;
@@ -113,10 +135,16 @@ main {
 			margin-top: 2rem;
 		}
 	}
-	.hotelimg {
+	.hotelimg, .hotelimg1{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1rem;
+		margin: 1rem 0 1rem 1rem;
 		img {
-			margin-bottom: 2rem;
+			//margin-bottom: 2px;
+			width: 100%;
 		}
+		
 	}
 	.hotelimg1 {
 		img {

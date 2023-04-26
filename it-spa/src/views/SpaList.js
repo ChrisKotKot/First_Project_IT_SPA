@@ -10,7 +10,7 @@ export function SpaList() {
   const ul = document.createElement('ul');
   
   section.innerHTML = `
-    <h2>Spa List</h2>
+    <h2>Lista zabiegów SPA</h2>
     <p>Sprawdź ofertę naszych zabiegów.</p>
     <p class="loading">Ładuję listę zabiegów...</p>
   `;
@@ -34,10 +34,10 @@ export function SpaList() {
           `;
 
           const addToCartButton = document.createElement('button');
-          addToCartButton.innerText = 'Add to cart';
+          addToCartButton.innerText = 'Dodaj do koszyka';
           addToCartButton.classList.add('btn');
           addToCartButton.addEventListener('click', () => cartManager.addItem(treatment));
-          const detailsButton = NavButton('Read more...', () => SpaDetails(treatment.id), ['btn']);
+          const detailsButton = NavButton('Zobacz więcej...', () => SpaDetails(treatment.id), ['btn']);
           
           li.querySelector('footer').append(addToCartButton, detailsButton);
 

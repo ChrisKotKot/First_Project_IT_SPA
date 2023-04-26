@@ -9,7 +9,7 @@ export function RoomList() {
 	const ul = document.createElement('ul');
 
 	section.innerHTML = `
-    <h2>Room List</h2>
+    <h2>Lista naszych pokoi</h2>
     <p>Sprawdź ofertę pokoi.</p>
     <p class="loading">Ładuję listę pokoi...</p>
   `;
@@ -30,14 +30,14 @@ export function RoomList() {
           `;
 
 				const addToCartButton = document.createElement('button');
-				addToCartButton.innerText = 'Add to cart';
+				addToCartButton.innerText = 'Dodaj do koszyka';
 				addToCartButton.classList.add('btn');
 				addToCartButton.addEventListener('click', () =>
 					cartManager.addItem(room)
 				);
 
 				const detailsButton = NavButton(
-					'Read more...',
+					'Zobacz więcej...',
 					() => RoomDetails(room.id),
 					['btn']
 				);

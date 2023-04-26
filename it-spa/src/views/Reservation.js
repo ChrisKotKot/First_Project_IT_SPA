@@ -8,11 +8,6 @@ export function Reservation() {
 	<div class="form-group">
     <label for="exampleFormControlSelect1">Example select</label>
     <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
     </select>
   </div>
     <div class="col-sm-10" >
@@ -21,20 +16,22 @@ export function Reservation() {
     <div class="col-sm-10">
       <input type="date" class="form-control" id="date_picker2" >
     </div>
+	<a href="mailto:some@email.com" target="_blank" class="btn btn-primary">Sprawdź dostępność!</a>
     </section>
     `;
 
-	const Group = div.querySelector('#exampleFormControlSelect1');
+	const group = div.querySelector('#exampleFormControlSelect1');
 
-	fetch(`http://localhost:3000/rooms/${roomId}`)
+	fetch(`http://localhost:3000/rooms`)
 		.then((response) => response.json())
-		.then((room) => {
+		.then((rooms) => {
 			const lis = rooms.map((room) => {
-				const li = document.createElement('option');
-				li.innerText = room.name;
-				return li;
+				const optioner = document.createElement('option');
+				optioner.text = room.name;
+				return optioner;
 			});
-			Group.append(...lis);
+
+			group.append(...lis);
 		});
 
 	let today = new Date();
