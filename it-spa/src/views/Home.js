@@ -47,7 +47,7 @@ export function Home() {
 		<div class="jumbotron text-center">
 			<h2>Poznaj naszą ofertę!</h2>
 			<ul class="features-list">
-				<li>Hotel</li>
+				<li><h4>Hotel</h4></li>
           <p>Hotel ten to prawdziwa perła wśród hoteli. Zbudowany w nowoczesnej i pięknej architekturze, urzeka swoim wyglądem już od pierwszego wejrzenia. Wnętrza są utrzymane w stylu minimalistycznym, co nadaje im elegancji i nowoczesności.
 
           Jednak prawdziwą perełką hotelu jest jego spa. Wspaniałe miejsce do relaksu i odprężenia, gdzie można skorzystać z szerokiej gamy zabiegów, masaży oraz innych form relaksu. Wybitne spa jest jednym z największych atutów tego hotelu i stanowi idealne miejsce na relaks dla każdego, kto chce odpocząć od zgiełku codzienności.
@@ -58,11 +58,10 @@ export function Home() {
           
           W sumie, ten hotel z piękną nowoczesną architekturą, wybitnym spa i restauracją, jest idealnym miejscem dla osób, które szukają relaksu, spokoju i luksusu w pięknych wnętrzach.</p>
 		  <section class="hotelimg"></section>
-				<li>Nowoczesne SPA</li>
+				<li><h4>Nowoczesne SPA</h4></li>
           <p>To najlepsze spa, prawdziwa oaza relaksu i odprężenia, oferująca szeroki wybór zabiegów, takich jak masaże, zabiegi na twarz i ciało, sauny i wiele innych. Wszystkie zabiegi są wykonywane przez wykwalifikowany personel, który zadba o to, aby każdy gość poczuł się wyjątkowo i zrelaksowany. Wspaniała atmosfera i wysokiej jakości produkty używane podczas zabiegów sprawiają, że to spa jest jednym z najlepszych w kraju.</p>
 		  <section class="hotelimg1"></section>
 			</ul>
-			<hr class="line" />
 		</div>
 	</div>
   </div>
@@ -106,7 +105,7 @@ export function Home() {
     <div class="narrow">
       <div class="heading col-12">
 	  <ul>
-	 <li class="text-center">Zalety hotelu:
+	 <li> <h4 class="text-center">Zalety hotelu
 	 </li> 
 	  </ul>
         
@@ -117,36 +116,28 @@ export function Home() {
           <div class="resource">
             <i class="fab fa-js-square fa-3x"></i>
             <h2>18+</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate officiis
-              expedita eaque optio sit odit saepe vel quisquam voluptatum quae consequuntur natus
-              ducimus tenetur officia suscipit dolorem, corrupti ab.</p>
+            <p>Hotel dla osób pełnoletnich może być dobrym wyborem dla grupy przyjaciół lub par, które szukają miejsca do relaksu i zabawy bez obawienia się o przeszkadzanie innym gościom.</p>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="resource">
             <i class="fas fa-terminal fa-3x"></i>
             <h2>Otoczony lasem</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate officiis
-              expedita eaque optio sit odit saepe vel quisquam voluptatum quae consequuntur natus
-              ducimus tenetur officia suscipit dolorem, corrupti ab.</p>
+            <p>Hotel położony w lesie może oferuje piękne widoki na naturę oraz ciszę i spokój, co jest idealne dla osób, które szukają wypoczynku z dala od miejskiego zgiełku.Zapewniamy gościom możliwość aktywnego spędzenia czasu na świeżym powietrzu, np. poprzez organizację pieszych wycieczek lub przejażdżek rowerowych po okolicy.</p>
           </div>	
         </div>
         <div class="col-lg-3">
           <div class="resource">
             <i class="fab fa-btc fa-3x"></i>
             <h2>Nad jeziorem</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate officiis
-              expedita eaque optio sit odit saepe vel quisquam voluptatum quae consequuntur natus
-              ducimus tenetur officia suscipit dolorem, corrupti ab.</p>
+            <p>Hotel nad jeziorem to idealne miejsce na spędzenie wakacji dla osób, które lubią aktywny wypoczynek na świeżym powietrzu, np. wędkowanie, pływanie, kajakarstwo lub jazdę na rowerze.</p>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="resource">
             <i class="fas fa-seedling fa-3x "></i>
             <h2>Nowoczesny Design</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate officiis
-              expedita eaque optio sit odit saepe vel quisquam voluptatum quae consequuntur natus
-              ducimus tenetur officia suscipit dolorem, corrupti ab.</p>
+            <p>Doskonałe miejsce dla osób ceniących sztukę i design, dzieła sztuki oraz innowacyjne rozwiązania, przyciągają uwagę i inspirują do refleksji.</p>
           </div>
       </div>
     </div>
@@ -159,8 +150,11 @@ export function Home() {
 
 <div id="clients">
 		<div class="jumbotron">
-			<div class="heading col-12">
-				<h3 class="text-center">Opinie naszych klientów:</h3>
+		<ul>
+	 <li> <h4 class="text-center">Opinie naszych klientów:
+	 </li> 
+	  </ul>
+			
 			</div>
 			<div class="row text-center">
 				<div class="col-md-4">
@@ -232,6 +226,10 @@ export function Home() {
 	mapG.innerHTML = `
 
 <!--Google map-->
+<ul>
+	 <li> <h4 class="text-center">Zobacz nasz hotel i okolice na mapie!
+	 </li> 
+	  </ul>
 <div id="map-container-google-3" class="z-depth-1-half map-container-3">
   <iframe src="https://maps.google.com/maps?q=Nowe+Guty&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
     style="border:0" allowfullscreen></iframe>
@@ -243,9 +241,11 @@ export function Home() {
 
   <footer>
     <div class="col-12 text-center jumbotron">
-      <h3 class="heading">Zadzwoń do nas!</h3>
       <div class="logoContact"></div>
-      <p>Lorem ipsum dolor sit amet.</p>
+	  <a class="btn btn-success btn-xlg" href="tel:713-992-0916" style="padding:20px;background-color:rgba(36,61,24,1)">
+   Zadzwoń do nas!
+</a>
+      <p>Recepcja czynna 24/7</p>
       <strong>Informacje pod numerem 48 700 000 999</strong>
       <hr />
       <a href="https://www.youtube.com" target="_blank">

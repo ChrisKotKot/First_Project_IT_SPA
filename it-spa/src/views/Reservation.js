@@ -3,7 +3,18 @@ export function Reservation() {
 
 	div.innerHTML = `
     <section>
-    <h1>Tu powstanie kalendarz</h1>
+    <h1>Sprawdź dostępność w naszym kalendarzu!</h1>
+	<div class="col-sm-10">
+	<div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
     <div class="col-sm-10" >
       <input type="date" class="form-control" id="date_picker"  >
     </div>
@@ -12,6 +23,19 @@ export function Reservation() {
     </div>
     </section>
     `;
+
+	const Group = div.querySelector('#exampleFormControlSelect1');
+
+	fetch(`http://localhost:3000/rooms/${roomId}`)
+		.then((response) => response.json())
+		.then((room) => {
+			const lis = rooms.map((room) => {
+				const li = document.createElement('option');
+				li.innerText = room.name;
+				return li;
+			});
+			Group.append(...lis);
+		});
 
 	let today = new Date();
 	const dd = String(today.getDate()).padStart(2, '0');
