@@ -21,14 +21,7 @@ export function Home() {
 	</div>
 
     `;
-	// const buttonFor = document.createElement('button');
-	// buttonFor.classList.add('btn', 'btn-success');
-	// buttonFor.innerText = 'button';
-	// buttonFor.addEventListener('click', function () {
-	// 	MyNAvi(RoomList);
-	// });
-	// const sectionFor = div.querySelector('.For');
-	// sectionFor.append(buttonFor);
+
 
 	const img1 = document.createElement('img');
 	img1.classList.add('d-block', 'w-100');
@@ -64,11 +57,6 @@ export function Home() {
   </div>
   `;
 
-	// 	const gallery = document.createElement('gallery');
-
-	// 	gallery.innerHTML = `
-
-	//   `;
 
 	const img7 = document.createElement('img');
 	img7.src = require('../assets/7.png');
@@ -92,7 +80,6 @@ export function Home() {
 	const sectionHotelImage1 = course.querySelector('.hotelimg1');
 	sectionHotelImage1.append(img9, img10);
 
-	// gallery.append(img7, img8);
 
 	const resour = createEl('div', [], { id: 'resour' });
 	resour.innerHTML = `
@@ -151,14 +138,7 @@ export function Home() {
 	 <li> <h4 class="text-center">Opinie naszych klientów:
 	 </li> 
 	  </ul>
-			
 			</div>
-			
-
-
-
-
-
 			<div class="row text-center">
 				<div class="col-md-4">
 					<div class="row rowclient">
@@ -175,7 +155,6 @@ export function Home() {
 						</div>
 					</div>
 				</div>
-				
         <div class="col-md-4">
 					<div class="row rowclient">
 						<div id=client2 class="col-lg-4 col-sm-4">

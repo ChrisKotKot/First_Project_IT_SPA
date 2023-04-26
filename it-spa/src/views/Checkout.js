@@ -211,14 +211,6 @@ export function Checkout() {
 	});
 	ul.append(...tableRows);
 
-	// <ul class="listCart list-group mb-3">
-	// <li class="list-group-item d-flex justify-content-between lh-condensed">
-	//   <div>
-	//     <h6 class="my-0">Nazwa Produktu</h6>
-	//     <small class="text-muted">Brief description</small>
-	//   </div>
-	//   <span class="text-muted">12 PLN</span>
-	// </li>
 
 section.querySelector("#orderButton").addEventListener('click', () =>{
 
