@@ -9,9 +9,9 @@ export function RoomList() {
 	const ul = document.createElement('ul');
 
 	section.innerHTML = `
-    <h2>Lista naszych pokoi</h2>
-    <p>Sprawdź ofertę pokoi.</p>
+    <h2 class="text-center">Lista naszych pokoi</h2>
     <p class="loading">Ładuję listę pokoi...</p>
+	<div class="room-list"></div>
   `;
 
 	// pobieramy liste pokoi z serwera
@@ -19,6 +19,8 @@ export function RoomList() {
 		.then((response) => response.json())
 		.then((rooms) => {
 			const lis = rooms.map((room) => {
+				const type = "roomList";
+
 				const li = document.createElement('li');
 
 				li.innerHTML = `
@@ -52,7 +54,8 @@ export function RoomList() {
 			// usuwamy element mowiacy o ladowaniu
 			section.querySelector('.loading').remove();
 			// podstawiamy gotowa liste z pokojami
-			section.append(ul);
+			section.querySelector('.room-list').append(ul);
+			// section.append(ul);
 		});
 
 	return section;
