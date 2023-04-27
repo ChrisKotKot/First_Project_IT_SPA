@@ -18,7 +18,7 @@ body {
 	height: 50%;
 	color: #243d18;
 }
-.car{
+.car {
 	width: 100%;
 }
 .client {
@@ -27,25 +27,23 @@ body {
 	min-width: 15vw;
 	border-radius: 20%;
 }
-@media only screen and (max-width:576px){
+@media only screen and (max-width: 576px) {
 	.client {
-	  width: 50%;
+		width: 50%;
 	}
-  }
-  @media only screen and (min-width: 768px) and (max-width: 992px) {
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
 	.client {
-	  width: 50%;
+		width: 50%;
 	}
-  }
-  #client1,
-  #client2,
-  #client3{
-
+}
+#client1,
+#client2,
+#client3 {
 	display: flex;
 	//flex-wrap: wrap;
 	justify-content: center;
-
-  }
+}
 .map-container-3 {
 	overflow: hidden;
 	padding-bottom: 56.25%;
@@ -135,7 +133,8 @@ main {
 			margin-top: 2rem;
 		}
 	}
-	.hotelimg, .hotelimg1{
+	.hotelimg,
+	.hotelimg1 {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 1rem;
@@ -144,11 +143,25 @@ main {
 			//margin-bottom: 2px;
 			width: 100%;
 		}
-		
 	}
 	.hotelimg1 {
 		img {
 			margin-bottom: 2rem;
+		}
+	}
+
+	.room-list,
+	.spa-list {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		li {
+			width: 35%;
+			margin-top: auto;
+			margin-bottom: 20px;
+			margin-right: auto;
+			margin-left: auto;
 		}
 	}
 
@@ -166,7 +179,62 @@ main {
 		flex-direction: column;
 		align-items: center;
 	}
+	@media only screen and (max-width: 576px) {
+		.room-list,
+		.spa-list {
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				padding: 0 0 0 0;
+				margin: 0 0 0 0;
 
+				li {
+					width: 50%;
+					margin-right: 10px;
+					margin-left: 20px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	@media only screen and (min-width: 577px) and (max-width: 992px) {
+		.spa-list,
+		.room-list {
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				padding: 0 0 0 0;
+				margin: 0 0 0 0;
+
+				li {
+					width: 45%;
+					margin-right: auto;
+					margin-left: auto;
+					margin-bottom: 20px;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	@media only screen and (min-width: 993px) {
+		.spa-list,
+		.room-list {
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+
+				li {
+					width: calc(100% / 3.2);
+					margin-right: auto;
+					margin-left: auto;
+					margin-bottom: 20px;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
 	article {
 		$bg-color-1: #847468;
 		$bg-color-2: #847468;
