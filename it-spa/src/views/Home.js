@@ -22,7 +22,6 @@ export function Home() {
 
     `;
 
-
 	const img1 = document.createElement('img');
 	img1.classList.add('d-block', 'w-100');
 	img1.src = require('../assets/2.jpg');
@@ -57,12 +56,13 @@ export function Home() {
   </div>
   `;
 
-
 	const img7 = document.createElement('img');
+	img7.classList.add('d-block', 'w-100');
 	img7.src = require('../assets/7.png');
 	img7.style.width = '50vw'; // vw = view width
 
 	const img8 = document.createElement('img');
+	img8.classList.add('d-block', 'w-100');
 	img8.src = require('../assets/6.jpg');
 	img8.style.width = '50vw'; // vw = view width
 
@@ -70,16 +70,17 @@ export function Home() {
 	sectionHotelImage.append(img7, img8);
 
 	const img10 = document.createElement('img');
+	img10.classList.add('d-block', 'w-100');
 	img10.src = require('../assets/3.jpg');
 	img10.style.width = '50vw'; // vw = view width
 
 	const img9 = document.createElement('img');
+	img9.classList.add('d-block', 'w-100');
 	img9.src = require('../assets/4.jpg');
 	img9.style.width = '50vw'; // vw = view width
 
 	const sectionHotelImage1 = course.querySelector('.hotelimg1');
 	sectionHotelImage1.append(img9, img10);
-
 
 	const resour = createEl('div', [], { id: 'resour' });
 	resour.innerHTML = `
